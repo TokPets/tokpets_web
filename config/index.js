@@ -2,6 +2,7 @@
 
 // see http://vuejs-templates.github.io/webpack for documentation.
 const path = require('path')
+const meta = require('./meta.json');
 
 module.exports = {
   build: {
@@ -36,5 +37,6 @@ module.exports = {
     // In our experience, they generally work as expected,
     // just be aware of this issue when enabling this option.
     cssSourceMap: false
-  }
+  },
+  meta : meta
 }

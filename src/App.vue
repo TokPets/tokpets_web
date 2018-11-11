@@ -11,8 +11,15 @@
 </template>
 
 <script>
+import { page } from 'vue-analytics'
+
 export default {
-  name: 'app'
+  name: 'app',
+  methods: {
+    track () {
+      page('/')
+    }
+  }
 }
 </script>
 
