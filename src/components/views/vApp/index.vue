@@ -5,11 +5,19 @@
 </template>
 
 <script>
+//  import firebase from 'firebase'
+import { page } from 'vue-analytics'
+
 export default {
   name: 'viewIndex',
+  methods: {
+    track () {
+      page('/')
+    }
+  },
   data () {
     return {
-      msg: ' Welcome to Index '
+      msg: ' Welcome to Toks App '
     }
   }
 }
