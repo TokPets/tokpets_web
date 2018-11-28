@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import vLoaderComponent from '@/components/common/loading/loading.component.vue'
+import vLoaderComponent from './loading.component.vue'
 
 describe('vLoader.vue', () => {
   it('should render correct contents', () => {

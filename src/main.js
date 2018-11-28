@@ -7,6 +7,8 @@ import VueAnalytics from 'vue-analytics'
 import App from './App'
 import router from './router'
 
+import store from './store/index'
+
 // import firebase from 'firebase'
 
 Vue.config.productionTip = false
@@ -33,6 +35,7 @@ Vue.use(VueAnalytics, {
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
 })

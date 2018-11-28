@@ -12,7 +12,7 @@
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
-    "deploy": "node build/build.js && firebase deploy"
+    "deploy": "git add * && git commit -m 'Deploy Updated' && node build/build.js && firebase deploy"
   },
   "dependencies": {
     "firebase": "^5.5.9",
@@ -20,7 +20,8 @@
     "vue": "^2.5.2",
     "vue-analytics": "^5.16.0",
     "vue-lottie": "^0.2.1",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.5",

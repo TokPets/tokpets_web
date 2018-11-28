@@ -1,50 +1,48 @@
 <template>
-  <div class="hello">
-
-    <v-loader-component></v-loader-component>
-
-    <h1>{{ msg }}</h1>
-
+  <div class="loader main" v-if="MESSAGE != 'LOADED' ">
+    <h1>{{ MESSAGE }}</h1>
   </div>
 </template>
 
 <script>
-import { page } from 'vue-analytics'
-import vLoaderComponent from './../../common/loading/loading.component'
-
 export default {
-  name: 'viewIndex',
-  components: {
-    vLoaderComponent
+  name: 'vLoaderComponent',
+  components: {},
+  methods: {
+    waiting () {
+      setTimeout(() => {
+        this.MESSAGE = 'LOADED'
+      }, this.TIME)
+    }
   },
   mounted () {
-    document.title = 'TokPets Main View'
-  },
-  methods: {
-    track () {
-      page('/')
-    }
+    this.waiting()
   },
   data () {
     return {
-      msg: ' Welcome to Index v2 '
+      MESSAGE: ' Loading ... ',
+      TIME: 2000
     }
   }
 }
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
-@import (reference) "../../../styles/main.less";
-h1{
-  color: @color-red;
-}
-.hello{
+
+  @import (reference) "../../../styles/main.less";
+
+  .main{
 
     display: block;
 
     width: 100vw;
     height: 100vh;
+
+    position: fixed;
+    top:0px;
+    left: 0px;
+
+    background-color: white;
 
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -64,5 +62,8 @@ h1{
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-}
+
+  }
+
+
 </style>

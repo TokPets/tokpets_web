@@ -13,6 +13,7 @@ export default new Router({
     {
       path: '/',
       name: 'Web',
+      meta: { title: 'Team Member' },
       component: viewIndex
     },
     {
@@ -25,5 +26,6 @@ export default new Router({
       name: 'Admin',
       component: viewAdmin
     }
-  ]
+  ],
+  scrollBehavior: () => ({ y: 0 })
 })
