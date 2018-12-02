@@ -1,7 +1,7 @@
 <script>
 /**
  *  ------------------------------------------------
- *  -- TokPet's Component : loading.component.vue --
+ *  -- TokPet's Component : tabs.component.vue --
  *  ------------------------------------------------
  *
  *
@@ -10,7 +10,7 @@
 export default {
 
   // Component's Name
-  name: 'vLoaderComponent',
+  name: 'vTabsComponent',
 
   // Component's Childs
   components: {},
@@ -18,16 +18,6 @@ export default {
   // Component's Methods
   methods: {
 
-    /**
-     * Method :: waiting()
-     * @param void
-     * @return void
-     */
-    vmWaiting () {
-      setTimeout(() => {
-        this.SHOW = false
-      }, this.TIME)
-    }
   },
 
   // Component's Inputs/Parameters
@@ -35,23 +25,20 @@ export default {
 
   // Component's created function.
   created () {
-    this.vmWaiting()
+
   },
 
   // Component's Attributes or data object.
   data () {
     return {
-      SHOW: true,
-      MESSAGE: 'LOADING LOGO',
-      TIME: 2000
     }
   }
 }
 </script>
 
 <template>
-  <div class="loader main" v-if="SHOW">
-    <h1>{{ MESSAGE }}</h1>
+  <div class="header main">
+    <h2>TABS</h2>
   </div>
 </template>
 
@@ -64,11 +51,7 @@ export default {
     display: block;
 
     width: 100vw;
-    height: 100vh;
-
-    position: fixed;
-    top:0px;
-    left: 0px;
+    height: 2em;
 
     background-color: white;
 

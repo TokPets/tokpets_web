@@ -1,45 +1,124 @@
+<script>
+/**
+ *  ------------------------------------------------
+ *  -- TokPet's Component : @view/index.component.vue --
+ *  ------------------------------------------------
+ *
+ *
+ */
+
+// ----------------------------------------------- //
+// -- Import's ----------------------------------- //
+// ----------------------------------------------- //
+
+// Imports :: Libs & Vendors
+import { page } from 'vue-analytics'
+
+// Imports :: Shared Components
+import vLoaderComponent from './../../common/loading/loading.component'
+
+import vHeaderComponent from './../../common/header/header.component'
+import vFooterComponent from './../../common/footer/footer.component'
+
+import vSliderComponent from './../../common/slider/slider.component'
+import vFeaturesComponent from './../../common/features/features.component'
+import vTabsComponent from './../../common/tabs/tabs.component'
+
+import vGalleryButtonComponent from './../../common/gallery/button/gallery-button.component'
+import vInstragramFeedComponent from './../../common/instragram/feed/instragram-feed.component'
+
+// ----------------------------------------------- //
+
+// ----------------------------------------------- //
+// -- Export default component :: index.vue ------ //
+// ----------------------------------------------- //
+export default {
+
+  // Component's Name
+  name: 'viewIndex',
+
+  // Component's Childs
+  components: {
+    vLoaderComponent,
+    vHeaderComponent,
+    vFooterComponent,
+    vSliderComponent,
+    vFeaturesComponent,
+    vTabsComponent,
+    vGalleryButtonComponent,
+    vInstragramFeedComponent
+  },
+
+  // Component's Methods
+  methods: {
+
+    /**
+     * Method :: track()
+     */
+    track () {
+      page('/')
+    }
+
+  },
+
+  // Component's created function.
+  created () {
+    document.title = 'TokPets Collars and Trackers '
+  },
+
+  // Component's Attributes or data object.
+  data () {
+    return {}
+  }
+}
+// ----------------------------------------------- //
+</script>
+
 <template>
-  <div class="hello">
+  <div class="view">
 
-    <v-loader-component></v-loader-component>
+    <!-- View Loading Layer -->
+    <div class="view-loading">
+      <v-loader-component></v-loader-component>
+    </div>
 
-    <h1>{{ msg }}</h1>
+    <!-- View Content Layer -->
+    <div class="view-layout">
+
+      <div class="view-header">
+        <v-header-component></v-header-component>
+      </div>
+
+      <div class="view-section-intro">
+        <v-slider-component></v-slider-component>
+        <v-tabs-component></v-tabs-component>
+        <v-gallery-button-component></v-gallery-button-component>
+      </div>
+
+      <div class="view-section-features">
+        <v-features-component></v-features-component>
+      </div>
+
+      <div class="view-section-social">
+        <v-instragram-feed-component></v-instragram-feed-component>
+      </div>
+
+      <div class="view-header">
+        <v-footer-component></v-footer-component>
+      </div>
+
+
+
+
+    </div>
+
 
   </div>
 </template>
 
-<script>
-import { page } from 'vue-analytics'
-import vLoaderComponent from './../../common/loading/loading.component'
-
-export default {
-  name: 'viewIndex',
-  components: {
-    vLoaderComponent
-  },
-  mounted () {
-    document.title = 'TokPets Main View'
-  },
-  methods: {
-    track () {
-      page('/')
-    }
-  },
-  data () {
-    return {
-      msg: ' Welcome to Index v2 '
-    }
-  }
-}
-</script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
 @import (reference) "../../../styles/main.less";
-h1{
-  color: @color-red;
-}
-.hello{
+.view{
 
     display: block;
 
