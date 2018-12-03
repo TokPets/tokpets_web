@@ -39,6 +39,9 @@ export default {
 <template>
   <div class="header main">
     <h2>HEADER</h2>
+            <router-link to="/">Go to Index</router-link>
+        <router-link to="/app">Go to App</router-link>
+        <router-link to="/admin">Go to Admin</router-link>
   </div>
 </template>
 
