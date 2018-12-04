@@ -107,11 +107,7 @@ export default {
         <v-footer-component></v-footer-component>
       </div>
 
-
-
-
     </div>
-
 
   </div>
 </template>
@@ -124,6 +120,8 @@ export default {
 
     width: 100vw;
     height: 100vh;
+
+    background-color: darkgrey;
 
     display: -ms-flexbox;
     display: -webkit-flex;
