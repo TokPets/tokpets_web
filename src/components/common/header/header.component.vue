@@ -34,6 +34,8 @@ export default {
   data () {
     return {
       DATA: {
+        HomeText: 'Tok Pets',
+        ViewText: 'Log In',
         MENU: {
           isOpen: false,
           items: []
@@ -49,9 +51,9 @@ export default {
 
     <div class="layout-columns row ">
 
-      <div class="home-text">TOK PETS</div>
+      <div class="home-text"> {{ DATA.HomeText }}</div>
 
-      <div class="title-text">LOG IN </div>
+      <div class="title-text">  {{ DATA.ViewText }}</div>
 
       <div class="menu-button">
         <i class="fas fa-bars" v-if="!DATA.MENU.isOpen" @click="vmMenuToogle()"></i>
