@@ -15,6 +15,11 @@ const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 const loadMinified = require('./load-minified')
 
 
+var metaTags = '';
+Object.keys(config.meta).forEach(function (item) {
+  metaTags += ` <meta name="${item}" content="${config.meta[item]}">
+  `;
+})
 
 const env = process.env.NODE_ENV === 'testing' ?
   require('../config/test.env') :
@@ -63,6 +68,7 @@ const webpackConfig = merge(baseWebpackConfig, {
         'index.html' : config.build.index,
       template: 'index.html',
       inject: true,
+      meta : metaTags,
       minify: {
         removeComments: true,
         collapseWhitespace: true,
