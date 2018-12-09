@@ -103,7 +103,7 @@ export default {
         <v-instragram-feed-component></v-instragram-feed-component>
       </div>
 
-      <div class="view-header">
+      <div class="view-footer">
         <v-footer-component></v-footer-component>
       </div>
 
@@ -132,14 +132,27 @@ export default {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
     -webkit-align-content: center;
     -ms-flex-line-pack: center;
     align-content: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+}
+
+.view-layout{
+
+  display: block;
+
+  width: 100vw;
+  height: 100vh;
+
+  .view-header{
+
+  }
+
 }
 </style>
