@@ -15,7 +15,7 @@
     "deploy": "git add * && git commit -m DeployUpdate  && git push && node build/build.js && firebase deploy"
   },
   "dependencies": {
-    "firebase": "^5.5.9",
+    "firebase": "^5.7.0",
     "less": "^3.8.1",
     "vue": "^2.5.2",
     "vue-analytics": "^5.16.0",

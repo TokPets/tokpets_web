@@ -1,9 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import viewIndex from '@/components/views/vIndex/index.vue'
-import viewApp from '@/components/views/vApp/index.vue'
-import viewAdmin from '@/components/views/vAdmin/index.vue'
+import appViewLogin from '@/components/views/vApp/v0_Login/login.view.component.vue'
 
 Vue.use(Router)
 
@@ -12,19 +10,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Web',
-      meta: { title: 'Team Member' },
-      component: viewIndex
-    },
-    {
-      path: '/app',
-      name: 'App',
-      component: viewApp
-    },
-    {
-      path: '/admin',
-      name: 'Admin',
-      component: viewAdmin
+      name: 'App/Login',
+      component: appViewLogin
     }
   ],
   scrollBehavior: () => ({ y: 0 })
