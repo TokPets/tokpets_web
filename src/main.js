@@ -9,6 +9,7 @@ import router from './router'
 
 import store from './store/index'
 
+import VueI18n from 'vue-i18n'
 // import firebase from 'firebase'
 
 Vue.config.productionTip = false
@@ -30,6 +31,8 @@ Vue.config.productionTip = false
 Vue.use(VueAnalytics, {
   id: 'UA-128950882-1'
 })
+
+Vue.use(VueI18n)
 
 /* eslint-disable no-new */
 new Vue({
