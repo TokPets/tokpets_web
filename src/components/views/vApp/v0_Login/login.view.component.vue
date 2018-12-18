@@ -86,7 +86,7 @@ export default {
 
       <div class="view-sections">
 
-        <tabs-component></tabs-component>
+        <tabs-component/>
 
       </div>
 

@@ -10,13 +10,14 @@ import router from './router'
 import store from './store/index'
 
 import VueI18n from 'vue-i18n'
-// import firebase from 'firebase'
+
+const firebase = require('firebase/app')
 
 Vue.config.productionTip = false
 
 // Initialize Firebase
 
-/* var config = {
+var config = {
   apiKey: 'AIzaSyCfjpFwtYK3ju4OvT-wlqd8iS9INhfMcpw',
   authDomain: 'tokpetsapp.firebaseapp.com',
   databaseURL: 'https://tokpetsapp.firebaseio.com',
@@ -24,9 +25,8 @@ Vue.config.productionTip = false
   storageBucket: 'tokpetsapp.appspot.com',
   messagingSenderId: '359710188847'
 }
-*/
 
-// firebase.initializeApp(config)
+firebase.initializeApp(config)
 
 Vue.use(VueAnalytics, {
   id: 'UA-128950882-1'
